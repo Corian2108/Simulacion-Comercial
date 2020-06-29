@@ -92,7 +92,3 @@ namespace Simulacion_Comercial.Clases
         }
     }
 }
-
-/*Tienes que hacer una simulación de un cliente, un vendedor, un electrodomestico y una factura
-el cliente le compra al vendedor el electrodomestico y al hacer el pago alcanza la cuota de 1000$ 
-haciendose cliente premium se entera por una notificación de la factura*/
