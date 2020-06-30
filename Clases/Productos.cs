@@ -1,13 +1,15 @@
 namespace Simulacion_Comercial.Clases
 {
-    public class Productos
+    public class Productos : GeneradorAutomaticoIdentificacion
     {
+        //constructor
+        public Productos() : base()
+        {}
         //atributos
-        public int Id { get; set; }
         public string Tipo { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
-        public int Precio { get; set; }
+        public float Precio { get; set; } //float porque tiene decimales
         //metodos
         public string Encender(){
             return $"Ruidos de encendido";

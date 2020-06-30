@@ -1,9 +1,11 @@
 namespace Simulacion_Comercial.Clases
 {
-    public class Vendedor
+    public class Vendedor : GeneradorAutomaticoIdentificacion
     {
+        //constructor
+        public Vendedor() : base()
+        { }
         //Atributos
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Categoria { get; set; }
         public Cliente Cliente { get; set; }

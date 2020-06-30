@@ -1,16 +1,18 @@
 using System.Globalization;
 namespace Simulacion_Comercial.Clases
 {
-    public class Factura
+    public class Factura : GeneradorAutomaticoIdentificacion
     {
+        //constructor
+        public Factura() : base()
+        {}
         //atributos
         public Cliente Cliente { get; set; }
-        public int Id { get; set; }
         public string Detalle { get; set; }
-        public int Valor { get; set; }
+        public float Valor { get; set; }
 
         //metodos
-        public int Sumar()
+        public float Sumar()
         {
             return Cliente.Compras = Cliente.Compras + Valor;
         }

@@ -7,13 +7,18 @@ namespace Simulacion_Comercial
     {
         static void Main(string[] args)
         {
-            //Instanciar productos lavadora y refrigeradora
-            Random generador = new Random();
-            int id = generador.Next();
+            //Reemplaza los id de cada clase haciendolas clases hijas
+            var Empresa = new Empresa();
+            var bicicleta = new Bicicleta
+            {
+                Marca = "GT",
+                Modelo = "Karakoram",
+                Precio = 900
+            };
             
+            //Instanciar productos lavadora y refrigeradora
             Productos lavadora = new Productos
             {
-                Id = id,
                 Tipo = "Lavadora",
                 Marca = "Mabe",
                 Modelo = "Super Wash",
@@ -22,7 +27,6 @@ namespace Simulacion_Comercial
 
              Productos refrigeradora = new Productos
             {
-                Id = id,
                 Tipo = "Refrigeradora",
                 Marca = "Indurama",
                 Modelo = "Side by Side 566L",
@@ -31,9 +35,8 @@ namespace Simulacion_Comercial
             //Instanciar vendedor
              Vendedor vendedor1 = new Vendedor
              {
-                 Id = id,
-                 Nombre = "Carlos",
-                 Categoria = "Junior",
+                Nombre = "Carlos",
+                Categoria = "Junior",
              };
             //Solicita introducir Nombre
             Console.WriteLine("Para iniciar introduce tu nombre");
@@ -41,10 +44,9 @@ namespace Simulacion_Comercial
             //Isntancia Cliente con nombre introducido y asiga id aleatorio
              Cliente cliente1 = new Cliente
              {
-                 Id = id,
-                 Nombres = nombreCliente,
-                 Compras = 8000,
-                 MiVendedor = vendedor1
+                Nombres = nombreCliente,
+                Compras = 8000,
+                MiVendedor = vendedor1
              };
 
             //Cliente.Saludar
@@ -65,7 +67,6 @@ namespace Simulacion_Comercial
                 Factura factura1 = new Factura
                 {
                     Cliente = cliente1,
-                    Id = id,
                     Detalle = $"{lavadora.Tipo} {lavadora.Marca} {lavadora.Modelo}",
                     Valor = lavadora.Precio
                 };
@@ -78,7 +79,6 @@ namespace Simulacion_Comercial
                 Factura factura1 = new Factura
                 {
                     Cliente = cliente1,
-                    Id = id,
                     Detalle = $"{refrigeradora.Tipo} {refrigeradora.Marca} {refrigeradora.Modelo}",
                     Valor = refrigeradora.Precio
                 };
