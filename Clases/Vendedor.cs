@@ -1,11 +1,8 @@
 namespace Simulacion_Comercial.Clases
 {
-    public class Vendedor
+    public class Vendedor: Empleados
     {
         //Atributos
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Categoria { get; set; }
         public Cliente Cliente { get; set; }
         //Metodos
         public string Saludar(string nombre)
@@ -19,7 +16,7 @@ namespace Simulacion_Comercial.Clases
         }
         public string CerrarVenta(string nombre)
         {
-            return $"Perfecto señor {nombre} permitame su numero de cedula, para hacer la factura";
+            return $"Perfecto señor {nombre} pase a la caja para hacer su factura";
 
         }
         public string Despedirse(string nombre)

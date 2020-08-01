@@ -4,9 +4,10 @@ namespace Simulacion_Comercial.Clases
     {
         //atributos
         public int Id { get; set; }
+        private int Ci { get; set; }
         public string Nombres { get; set; }
         public int Compras { get; set; }
-        private bool Premium { get; set; }
+        protected bool Premium { get; set; }
 
         Vendedor elVendedor;
         public Vendedor MiVendedor
@@ -89,6 +90,10 @@ namespace Simulacion_Comercial.Clases
             {
                 return elVendedor.Despedirse(Nombres);
             }
+        }
+        public void ActualizarCi(int ci)
+        {
+            this.Ci = ci;
         }
     }
 }

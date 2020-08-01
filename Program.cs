@@ -1,5 +1,6 @@
 ﻿using System;
 using Simulacion_Comercial.Clases;
+using Simulacion_Comercial.Utilidades;
 
 namespace Simulacion_Comercial
 {
@@ -28,17 +29,23 @@ namespace Simulacion_Comercial
                 Modelo = "Side by Side 566L",
                 Precio = 2200
             };
-            //Instanciar vendedor
+            //Instanciar empleados
              Vendedor vendedor1 = new Vendedor
              {
                  Id = id,
                  Nombre = "Carlos",
-                 Categoria = "Junior",
+                 Categoria = "Junior"
+             };
+             Cajero cajero1 = new Cajero
+             {
+                 Id =id,
+                 Nombre = "Juan",
+                 Categoria = "Cajero"
              };
             //Solicita introducir Nombre
             Console.WriteLine("Para iniciar introduce tu nombre");
             string nombreCliente = Console.ReadLine();
-            //Isntancia Cliente con nombre introducido y asiga id aleatorio
+            //Isntancia Cliente con nombre introducido y asigna id aleatorio
              Cliente cliente1 = new Cliente
              {
                  Id = id,
@@ -46,19 +53,23 @@ namespace Simulacion_Comercial
                  Compras = 8000,
                  MiVendedor = vendedor1
              };
-
             //Cliente.Saludar
-            Console.WriteLine(cliente1.Saludar());
+            Console.WriteLine(AyudanteTexto.DividirTexto(cliente1.Saludar()));
             //Vendedor.Saludar
             string opcion = Console.ReadLine();
             Console.WriteLine(cliente1.Comprar(opcion, lavadora, refrigeradora));
             //Desicion de compra
             string desicion = Console.ReadLine();
             Console.WriteLine(cliente1.Desicion(desicion));
+            //Cajero.saludar
+            Console.WriteLine(cajero1.Saludar(cliente1.Nombres));
+            //Cajero.hacer factura
+            Console.WriteLine(cajero1.HacerFactura(cliente1.Nombres));
             //Cambiar id
             string cedulaString = Console.ReadLine();
             int cedula = Convert.ToInt32(cedulaString);
-            cliente1.Id = cedula;
+            cliente1.ActualizarCi(cedula);
+
             //Instanciar factura
             if (opcion == "Lavadora")
             {
