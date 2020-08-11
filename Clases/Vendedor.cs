@@ -19,8 +19,12 @@ namespace Simulacion_Comercial.Clases
         }
         public string CerrarVenta(string nombre)
         {
-            return $"Perfecto señor {nombre} permitame su numero de cedula, para hacer la factura";
+            return $"Perfecto señor {nombre} permitame su numero de cedula, para hacer la factura" + EnviarCorreo(nombre);
 
+        }
+        public string EnviarCorreo(string nombre)
+        {
+            return $"Estimado señor {nombre}, su factura ha sido enviada por correo electrónico";
         }
         public string Despedirse(string nombre)
         {

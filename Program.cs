@@ -1,5 +1,6 @@
 ﻿using System;
 using Simulacion_Comercial.Clases;
+using Simulacion_Comercial.Servicios;
 
 namespace Simulacion_Comercial
 {
@@ -69,7 +70,11 @@ namespace Simulacion_Comercial
                     Detalle = $"{lavadora.Tipo} {lavadora.Marca} {lavadora.Modelo}",
                     Valor = lavadora.Precio
                 };
+                //Instanciamiento de EmailService
+                var Email1 = new Mailchimp();
                 cliente1.MiFactura = factura1;
+                //Envio de Factura
+                Console.WriteLine(Email1.Send());
                 Console.WriteLine($"Felicidades Sr.{cliente1.Nombres}, a acumulado {factura1.Sumar()} en nuestro programa de fidelizacion");
                 Console.WriteLine(cliente1.MejorarCategoria());
             }
@@ -82,7 +87,11 @@ namespace Simulacion_Comercial
                     Detalle = $"{refrigeradora.Tipo} {refrigeradora.Marca} {refrigeradora.Modelo}",
                     Valor = refrigeradora.Precio
                 };
+                //Instanciamiento de EmailService
+                var Email1 = new SendGrid();
                 cliente1.MiFactura = factura1;
+                //Envio de Factura
+                Console.WriteLine(Email1.Send());
                 Console.WriteLine($"Felicidades Sr.{cliente1.Nombres}, a acumulado {factura1.Sumar()} en nuestro programa de fidelizacion");
                 Console.WriteLine(cliente1.MejorarCategoria());
             }
