@@ -6,4 +6,5 @@ Este programa contiene los deberes de la unidad dos realizados para la materia d
 - Rama: tarea2; contempla la tarea 2 de la unidad 2 Orientación a objetos hasta en la sopa
 - Rama: tarea3; contempla la tarea 3 de la unidad 2 Interfaces, ¿Qué es y con qué se come?
 - Rama: tarea4; contempla la tarea 4 de la unidad 3 Dejando huella: finalización del programa
+- Rama: tarea5; contempla la tarea 5 de la unidad 4 En Paralelo
 Todas las tareas deben cumplir los requisitos especificados en cada apartado en sus respectivas ramas
