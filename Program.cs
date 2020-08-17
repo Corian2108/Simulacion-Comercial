@@ -1,5 +1,6 @@
 ﻿using System;
 using Simulacion_Comercial.Clases;
+using Simulacion_Comercial.Models;
 using Simulacion_Comercial.Servicios;
 
 namespace Simulacion_Comercial
@@ -99,7 +100,6 @@ namespace Simulacion_Comercial
             {
                 Console.WriteLine("Escriba bien");
             }
-
         }
     }
 }
