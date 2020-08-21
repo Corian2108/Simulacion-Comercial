@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Simulacion_Comercial.Clases
 {
     public class Productos
     {
         //atributos
+        [Key]
         public int Id { get; set; }
         public string Tipo { get; set; }
         public string Marca { get; set; }

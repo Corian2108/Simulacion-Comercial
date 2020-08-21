@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace Simulacion_Comercial.Clases
 {
     public class Cliente
     {
         //atributos
-        public int Id { get; set; }
+        [Key]
+        public int ClienteId { get; set; }
         public string Nombres { get; set; }
         public int Compras { get; set; }
         private bool Premium { get; set; }
@@ -23,7 +27,10 @@ namespace Simulacion_Comercial.Clases
             }
         }
 
-        Factura laFactura;
+        public List<Factura> Facturas { get; set; }
+        public List<Vendedor> Vendores { get; set;}
+        
+        /*Factura laFactura;
         public Factura MiFactura
         {
             get
@@ -36,7 +43,7 @@ namespace Simulacion_Comercial.Clases
                 laFactura = value;
                 laFactura.Cliente = this;
             }
-        }
+        }*/
         //metodos
         public string Saludar()
         {

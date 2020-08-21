@@ -1,11 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Simulacion_Comercial.Clases
 {
     public class Vendedor
     {
         //Atributos
+        [Key]
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Categoria { get; set; }
+
+        public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         //Metodos
         public string Saludar(string nombre)

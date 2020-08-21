@@ -1,13 +1,18 @@
 using System.Globalization;
+using System.ComponentModel.DataAnnotations;
+
 namespace Simulacion_Comercial.Clases
 {
     public class Factura
     {
         //atributos
-        public Cliente Cliente { get; set; }
+        [Key]
         public int Id { get; set; }
         public string Detalle { get; set; }
         public int Valor { get; set; }
+        //Foreign Key
+        public int ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
 
         //metodos
         public int Sumar()

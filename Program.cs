@@ -43,7 +43,7 @@ namespace Simulacion_Comercial
             //Isntancia Cliente con nombre introducido y asiga id aleatorio
              Cliente cliente1 = new Cliente
              {
-                 Id = id,
+                 ClienteId = id,
                  Nombres = nombreCliente,
                  Compras = 8000,
                  MiVendedor = vendedor1
@@ -60,7 +60,7 @@ namespace Simulacion_Comercial
             //Cambiar id
             string cedulaString = Console.ReadLine();
             int cedula = Convert.ToInt32(cedulaString);
-            cliente1.Id = cedula;
+            cliente1.ClienteId = cedula;
             //Instanciar factura
             if (opcion == "Lavadora")
             {
@@ -73,7 +73,7 @@ namespace Simulacion_Comercial
                 };
                 //Instanciamiento de EmailService
                 var Email1 = new Mailchimp();
-                cliente1.MiFactura = factura1;
+               /* cliente1.MiFactura = factura1;*/
                 //Envio de Factura
                 Console.WriteLine(Email1.Send());
                 Console.WriteLine($"Felicidades Sr.{cliente1.Nombres}, a acumulado {factura1.Sumar()} en nuestro programa de fidelizacion");
@@ -90,7 +90,7 @@ namespace Simulacion_Comercial
                 };
                 //Instanciamiento de EmailService
                 var Email1 = new SendGrid();
-                cliente1.MiFactura = factura1;
+                /*cliente1.MiFactura = factura1;*/
                 //Envio de Factura
                 Console.WriteLine(Email1.Send());
                 Console.WriteLine($"Felicidades Sr.{cliente1.Nombres}, a acumulado {factura1.Sumar()} en nuestro programa de fidelizacion");

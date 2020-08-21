@@ -10,7 +10,6 @@ namespace Simulacion_Comercial.Models {
         {
             optionsBuilder.UseSqlServer( @"Server =.\SQLEXPRESS; Database = ComercialDB; Trusted_Connection = True;");
         }
-
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Productos> Productos { get; set; }
